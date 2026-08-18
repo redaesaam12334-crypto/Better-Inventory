@@ -1,0 +1,21 @@
+name: Build Amethyst Mod
+on: [push]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - uses: xmake-io/setup-xmake@v2
+
+      - name: Build
+        run: xmake
+
+      - name: Upload Mod
+        uses: actions/upload-artifact@v4
+        with:
+          name: Compiled-Mod
+          path: build/
