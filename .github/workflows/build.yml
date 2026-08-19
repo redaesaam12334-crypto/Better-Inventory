@@ -14,6 +14,8 @@ jobs:
           xmake-version: latest
 
       - name: Build with xmake
+        env:
+          AMETHYST_SRC: ${{ github.workspace }}/AmethystAPI
         run: |
           xmake config -a x86_64 -y
           xmake -y
