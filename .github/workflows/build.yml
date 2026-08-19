@@ -14,10 +14,8 @@ jobs:
           xmake-version: latest
 
       - name: Build with xmake
-        env:
-          AMETHYST_SRC: ${{ github.workspace }}
         run: |
-          xmake config -a x86_64 -y
+          xmake config -y
           xmake -y
 
       - name: Upload Mod
