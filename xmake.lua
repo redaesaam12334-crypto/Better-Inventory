@@ -4,7 +4,13 @@ target("Better-Inventory")
     set_kind("shared")
     set_languages("c++20")
     
-    add_includedirs("src", "AmethystAPI/include", "AmethystAPI/src", "AmethystAPI/vendor")
+    add_includedirs(
+        "src", 
+        "AmethystAPI/include", 
+        "AmethystAPI/src", 
+        "AmethystAPI/vendor",
+        "AmethystAPI"
+    )
     add_files("src/**.cpp")
     
     if is_plat("windows") then
