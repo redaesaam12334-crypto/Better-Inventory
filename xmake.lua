@@ -8,11 +8,14 @@ target("Better-Inventory")
         "src", 
         "AmethystAPI/include", 
         "AmethystAPI/src", 
-        "AmethystAPI/vendor",
-        "AmethystAPI/include/amethyst"
+        "AmethystAPI/vendor"
     )
     add_files("src/**.cpp")
     
+    before_build(function (target)
+        os.exec("xmake f --yes")
+    end)
+
     if is_plat("windows") then
         add_cxflags("/EHsc", "/Zc:__cplusplus")
     end
