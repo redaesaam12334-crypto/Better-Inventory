@@ -9,7 +9,7 @@ target("Better-Inventory")
         "AmethystAPI/include", 
         "AmethystAPI/src", 
         "AmethystAPI/vendor",
-        "AmethystAPI"
+        "AmethystAPI/include/amethyst"
     )
     add_files("src/**.cpp")
     
