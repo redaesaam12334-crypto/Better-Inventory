@@ -9,7 +9,7 @@ jobs:
         with:
           submodules: recursive
 
-      - uses: xmake-action/setup-xmake@v2
+      - uses: xmake-io/github-action-setup-xmake@v1
         with:
           xmake-version: latest
 
